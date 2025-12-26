@@ -103,6 +103,11 @@ const ShopCart = ({ availableProducts }) => {
       <h3 style={{ color: "var(--text-result)", textAlign: "right" }}>
         Всего: ${totalCost.toFixed(2)}
       </h3>
+      {isFilterActive && (
+        <h4 style={{ color: "var(--text-result)", textAlign: "right" }}>
+          Отфильтровано: ${filteredCost.toFixed(2)}
+        </h4>
+      )}
     </div>
   );
 };

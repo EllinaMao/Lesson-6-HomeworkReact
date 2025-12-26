@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ShopCart from "./ShopCart";
 import ProductList from "./ProductList";
 import "../assets/css/Shop.css";
-export default function Shop() {
+export default function Shop({shopName}) {
   const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
 
@@ -36,7 +36,7 @@ export default function Shop() {
 
   return (
     <>
-      <header className="shop-header"> Shop Component </header>
+      <header className="shop-header">{shopName}</header>
       <div className="shop-container">
         <ProductList products={products} onAdd={handleAddToCart} />
 
