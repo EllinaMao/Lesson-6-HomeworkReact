@@ -1,16 +1,28 @@
-# React + Vite
+У вас есть компонент представляющий витрину товаров, и компонент представляющий корзину в интернет магазине.
+Корзина содержит массив товаров: id, name, price, quantity.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Пользователь может:
 
-Currently, two official plugins are available:
+1) Увеличивать / уменьшать количество товара.
+2) Добавлять / удалять новый товар в корзину.
+3) Включать чекбокс «Показать только товары дороже 100».
+Необходимо:
+1) Отображать список товаров.
+2) Считать общую стоимость корзины.
+3) Считать стоимость только отфильтрованных товаров.
+Подсчёт общей стоимости должен быть реализован через useMemo. Пересчёт происходит только при изменении списка товаров. Переключение чекбокса не должно вызывать пересчёт общей суммы.
+________
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Создайте компонент React для управления списком задач (To-Do List). Компонент должен позволять пользователю добавлять новые задачи, отмечать задачи как выполненные и удалять задачи.
+Создайте функциональный компонент TodoList. Используйте хук useState для управления состоянием списка 
 
-## React Compiler
+________
+Создайте приложение для отслеживания настроения, которое позволит пользователю выбирать текущее настроение и видеть историю своих выборов. Для управления состоянием приложения используйте хук useState.
+______
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Создайте React-приложение, которое позволяет пользователю переключаться между темной и светлой темой. Используйте пользовательский хук useTheme для управления текущей темой и сохранения выбора пользователя в localStorage, чтобы тема сохранялась при перезагрузке страницы
+_________
+Создайте компонент RandomUser, который при монтировании делает запрос к публичному API (например, https://randomuser.me/api/) и отображает информацию о случайном пользователе: имя, фото и email. Используйте useEffect для выполнения запроса один раз после монтирования компонента.
+_________________
+Создайте приложение, отображающие тарифные планы в виде карточек. Каждая карточка предоставляет один компонент, который вызывается 3 раза в другом компоненте. Те данные, которые отличаются, передаются через props. При нажатии на кнопку, скрывайте карточку. Обязательно используйте хук.
+<img width="326" height="304" alt="image" src="https://github.com/user-attachments/assets/5c63625e-11fe-4e3f-87b4-58dc00881161" />
